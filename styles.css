@@ -1,0 +1,51 @@
+/* box size para tamaño de caja desde el borde*/
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+.container {
+    /*se centra al superar los 1200px*/
+    margin: auto; 
+    max-width: 1200px;  
+}
+
+.flex-container {
+    display: flex;
+    /*direccion fila y envuelve a los elemetos segun tamaño*/
+    flex-flow: row wrap;
+}
+
+.flex-item{
+    /* no crecer, no reducir y 100%*/
+    flex: 0 0 100%;
+    border: thin solid #ccc;
+}
+
+
+@media (min-width: 576px) { 
+    .flex-item {
+        flex:0 0 50% ;
+    }
+ }
+
+
+@media (min-width: 768px) { 
+    .flex-item {
+        flex:0 0 33.33333333333333% ;
+    }
+ }
+
+
+@media (min-width: 992px) { 
+    .flex-item {
+        flex:0 0 25% ;
+    }
+ }
+
+
+@media (min-width: 1200px) { 
+    .flex-item {
+        flex:0 0 16,666666667% ;
+    }
+ }
+
